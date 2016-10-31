@@ -14,6 +14,7 @@
     <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
     <AssemblyName>Octokit</AssemblyName>
     <LangVersion>5</LangVersion>
+    <TargetFrameworkVersion>v4.4</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +22,7 @@
     <Optimize>false</Optimize>
     <IntermediateOutputPath>obj\Debug\MonoAndroid</IntermediateOutputPath>
     <OutputPath>bin\Debug\MonoAndroid</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;CODE_ANALYSIS;CODE_ANALYSIS;SIMPLE_JSON_OBJARRAYINTERNAL;SIMPLE_JSON_INTERNAL;NET_45</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DefineConstants>TRACE;DEBUG;CODE_ANALYSIS;CODE_ANALYSIS;SIMPLE_JSON_OBJARRAYINTERNAL;SIMPLE_JSON_INTERNAL;NET_45</DefineConstants>
@@ -360,7 +361,6 @@
     <Compile Include="Models\Response\DeployKey.cs" />
     <Compile Include="Clients\IUserKeysClient.cs" />
     <Compile Include="Clients\UserKeysClient.cs" />
-    <Compile Include="Helpers\ApiUrls.Keys.cs" />
     <Compile Include="Helpers\SerializeNullAttribute.cs" />
     <Compile Include="Models\Request\CommitRequest.cs" />
     <Compile Include="Models\Response\RepositoryPermissions.cs" />
@@ -441,7 +441,6 @@
     <Compile Include="Models\Response\Enterprise\LicenseInfo.cs" />
     <Compile Include="Clients\Enterprise\EnterpriseOrganizationClient.cs" />
     <Compile Include="Clients\Enterprise\IEnterpriseOrganizationClient.cs" />
-    <Compile Include="Models\Request\NewOrganization.cs" />
     <Compile Include="Clients\IUserAdministrationClient.cs" />
     <Compile Include="Clients\UserAdministrationClient.cs" />
     <Compile Include="Helpers\ReferenceExtensions.cs" />
@@ -467,8 +466,6 @@
     <Compile Include="Clients\IMigrationsClient.cs" />
     <Compile Include="Clients\MigrationClient.cs" />
     <Compile Include="Clients\MigrationsClient.cs" />
-    <Compile Include="Models\Request\Enterprise\StartMigrationRequest.cs" />
-    <Compile Include="Models\Response\Enterprise\Migration.cs" />
     <Compile Include="Models\Request\StartMigrationRequest.cs" />
     <Compile Include="Models\Response\Migration.cs" />
     <Compile Include="Models\Request\NewReaction.cs" />
@@ -514,5 +511,5 @@
     <Compile Include="Clients\RepositoryTrafficClient.cs" />
     <Compile Include="Helpers\ExcludeFromPaginationConventionTest.cs" />
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
